@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "review",
+  "info": {
+    "name": "review",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "ProductId": {
+      "default": "",
+      "type": "integer"
+    },
+    "Review": {
+      "default": "",
+      "type": "text"
+    },
+    "Rating": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "products": {
+      "collection": "product",
+      "via": "review"
+    }
+  }
+}
